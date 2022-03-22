@@ -15,9 +15,13 @@ for row in mylist:
     print(*row, sep='')
 
 # B --- make all list elements *= 2 using nested for loops
-for i in range(0, len(mylist)):
-    for j in range(0, len(mylist[i])):
-        mylist[i][j] *= 2
+for row in range(0, len(mylist)):
+    mylist[row][:] = [num*2 for num in mylist[row]]
 
 # C --- Extra
+bigarray = []
 
+for i in range(0, 10):
+    bigarray += []
+    for j in range(0, 10):
+        bigarray[i] += '+' if i+j % 2
